@@ -6,7 +6,11 @@ import Todo from "./Todo";
 const TodoList = (props) => {
   return (
     <div>
-      <h3>TodoList Component</h3>
+      <ul>
+        {props.todos.map((todo) => (
+          <Todo key={todo.id} todo={todo} toggle={props.toggle} />
+        ))}
+      </ul>
     </div>
   );
 };

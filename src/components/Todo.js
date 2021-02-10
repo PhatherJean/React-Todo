@@ -1,9 +1,19 @@
 import React from "react";
 
-export default function Todo() {
+export default function Todo(props) {
+  const { todo, toggle } = props;
+  const handleToggle = () => {
+    toggle(todo.id);
+  };
   return (
     <div>
-      <h3>Todo Component</h3>
+      <li
+        onClick={handleToggle}
+        className={todo.completed ? "completed" : ""}
+        key={todo.id}
+      >
+        {todo.task}
+      </li>
     </div>
   );
 }
