@@ -1,0 +1,6 @@
+.completed {
+  text-decoration: line-through;
+  text-decoration-color: gold;
+  background-color: black;
+  color: cyan;
+}
